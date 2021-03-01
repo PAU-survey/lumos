@@ -15,7 +15,7 @@ setup(
     author_email = "lcabayol@ifae.es",
     description = ("Photometry on PAUCam images with neural networks."),
     keywords = "astronomy",
-    url = "https://gitlab.pic.es/pau/Lumos",
+    url = "https://github.com/lauracabayol/Lumos.git",
     license="GPLv3",
     packages=['Lumos'],
     install_requires=['numpy', 'pandas'],
