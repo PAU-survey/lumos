@@ -1,1 +1,1 @@
-from .lumos import Lumos
+from .Lumos import Lumos
