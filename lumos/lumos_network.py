@@ -3,7 +3,7 @@
 import torch
 from torch import nn
 
-class Denoiser(nn.Module):
+class Lumos_model(nn.Module):
     def __init__(self):
 
         super().__init__()
