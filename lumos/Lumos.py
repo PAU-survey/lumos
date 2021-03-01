@@ -15,7 +15,7 @@ import pandas as pd
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 
-from .lumos_network import Lumos
+from .lumos_network import Lumos_model
 
 from astropy.modeling.functional_models import Sersic2D
 from astropy.modeling.functional_models import Moffat2D
@@ -25,14 +25,14 @@ from skimage.measure import block_reduce
 
 
 class Lumos:
-    """Interface for background prection using neural networks."""
+    """Interface for photometry prection using neural networks."""
     
     # Here we estimate photometry on CPUs. This should be much
     # simpler to integrate and sufficiently fast.
     def __init__(self, model_path, batch_size=500):
         
         # Load the model.
-        cnn = Lumos()
+        cnn = Lumos_model()
         cnn.load_state_dict(torch.load(model_path, map_location='cpu'))
         cnn.eval()
        
