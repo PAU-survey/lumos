@@ -15,7 +15,7 @@ setup(
     author_email = "lcabayol@ifae.es",
     description = ("Photometry on PAUCam images with neural networks."),
     keywords = "astronomy",
-    url = "https://gitlab.pic.es/pau/bkgnet",
+    url = "https://gitlab.pic.es/pau/Lumos",
     license="GPLv3",
     packages=['bkgnet'],
     install_requires=['numpy', 'pandas'],
