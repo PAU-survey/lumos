@@ -9,7 +9,7 @@ def read(fname):
 # using pip.
 
 setup(
-    name = "bkgnet",
+    name = "Lumos",
     version = "0.1.0",
     author = "Laura Cabayol",
     author_email = "lcabayol@ifae.es",
