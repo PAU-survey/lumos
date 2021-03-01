@@ -5,7 +5,7 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-# This requires PyTorch, which can not be automatically be installed
+# This requires PyTorch, which cannot be automatically  installed
 # using pip.
 
 setup(
