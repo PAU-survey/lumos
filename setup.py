@@ -17,7 +17,7 @@ setup(
     keywords = "astronomy",
     url = "https://gitlab.pic.es/pau/Lumos",
     license="GPLv3",
-    packages=['bkgnet'],
+    packages=['Lumos'],
     install_requires=['numpy', 'pandas'],
     long_description=read('README.md'),
     classifiers=[
