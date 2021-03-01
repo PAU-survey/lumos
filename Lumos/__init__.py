@@ -1,1 +1,1 @@
-from .lumos import Lumos_net
+from Lumos import Lumos_net
