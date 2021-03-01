@@ -24,7 +24,7 @@ from scipy.signal import convolve, convolve2d, fftconvolve
 from skimage.measure import block_reduce
 
 
-class Lumos:
+class Lumos_net:
     """Interface for photometry prection using neural networks."""
     
     # Here we estimate photometry on CPUs. This should be much
