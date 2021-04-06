@@ -14,4 +14,4 @@ pip install -e .
 after entering into the cloned directory.
 
 ## Example usage
-An example is available at /Example/integration_example.ipynb
+An example is available in examples/integration_example.ipynb
