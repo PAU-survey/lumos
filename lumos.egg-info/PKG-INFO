@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: lumos
+Version: 0.1.0
+Summary: Photometry on PAUCam images with neural networks.
+Home-page: https://github.com/lauracabayol/Lumos
+Author: Laura Cabayol
+Author-email: lcabayol@ifae.es
+License: GPLv3
+Description: # Lumos
+        Repository for Lumos, a code for extracting photometry from astronomical images with neural networks.
+        
+        The code performs the following steps:
+        
+        * Creates image cutouts around the positions given externaly 
+        * Evaluates Lumos on the galaxy cutout
+        
+        # Installation
+        Clone the respository and write
+        
+        pip install -e .
+        
+        after entering into the cloned directory.
+        
+        ## Example usage
+        An example is available in examples/integration_example.ipynb
+        
+Keywords: astronomy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Astronomy
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
