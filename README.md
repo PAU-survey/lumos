@@ -14,4 +14,8 @@ pip install -e .
 after entering into the cloned directory.
 
 ## Example usage
-An example is available in examples/integration_example.ipynb
+Examples are available in examples/integration_example_internalDB.ipynb and examples/integration_example_externalDB.ipynb
+
+
+examples/integration_example_internalDB.ipynb works only for users with access to the PAUS DB
+examples/integration_example_externalDB.ipynb works for everybody
