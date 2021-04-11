@@ -9,7 +9,7 @@ def read(fname):
 # using pip.
 
 setup(
-    name = "Lumos",
+    name = "lumos",
     version = "0.1.0",
     author = "Laura Cabayol",
     author_email = "lcabayol@ifae.es",
@@ -17,7 +17,7 @@ setup(
     keywords = "astronomy",
     url = "https://github.com/lauracabayol/Lumos",
     license="GPLv3",
-    packages=['Lumos'],
+    packages=['lumos'],
     install_requires=['numpy', 'pandas'],
     long_description=read('README.md'),
     classifiers=[
