@@ -34,7 +34,7 @@ class Lumos_model(nn.Module):
         x = x.view(len(x),-1) #convert to 1D array
 
         #additional input information (magnitude, band, CCD galaxy coordinates)
-        
+
         x = torch.cat([x,Iauto,b.squeeze(1),coord.squeeze(1)],1)
         x = self.f_ex1(x)
         x = self.f_ex2(x)

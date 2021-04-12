@@ -168,3 +168,5 @@ class Lumos_net:
         pred = self._photometry_cutouts(stamps,profiles, metadata)
 
         return pred
+
+    
