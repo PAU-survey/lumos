@@ -26,3 +26,8 @@ Examples are available in examples/integration_example_internalDB.ipynb and exam
 
 examples/integration_example_internalDB.ipynb works only for users with access to the PAUS DB
 examples/integration_example_externalDB.ipynb works for everybody
+
+For the example external to the database, the user needs to download a reduced PAUS image example.
+This is available at ://www.pausurvey.org/pausurvey/data-processing/ 
+
+An example of trained model is also available at the examples directory.
