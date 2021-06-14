@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "lumos",
-    version = "0.1.0",
+    version = "1.0.0",
     author = "Laura Cabayol",
     author_email = "lcabayol@ifae.es",
     description = ("Photometry on PAUCam images with neural networks."),
@@ -18,10 +18,10 @@ setup(
     url = "https://github.com/lauracabayol/Lumos",
     license="GPLv3",
     packages=['lumos'],
-    install_requires=['numpy', 'pandas'],
+    install_requires=['numpy', 'pandas', 'torch', 'astropy', 'scipy', 'scikit-image'],
     long_description=read('README.md'),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Topic :: Astronomy",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
     ],

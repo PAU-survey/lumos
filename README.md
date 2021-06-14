@@ -31,3 +31,8 @@ For the example external to the database, the user needs to download a reduced P
 This is available at ://www.pausurvey.org/pausurvey/data-processing/ 
 
 An example of trained model is also available at the examples directory.
+
+# Acknowledgement
+This project has received funding from the European Union’s Horizon 2020 research
+and innovation programme under the grant agreement No
+776247 EWC.
