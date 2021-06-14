@@ -123,9 +123,9 @@ class Lumos_net:
         net_inp_img = torch.cat((cutouts,profiles),1)
 
                 
-        add_input = metadata.astype(np.float32, copy=False)
+        #add_input = metadata.astype(np.float32, copy=False)
         coord = torch.Tensor(np.c_[metadata.aperture_y.values, metadata.aperture_x.values]).unsqueeze(1)
-        band = torch.LongTensor(metadata.band.values).unsqueeze(1)
+        band = torch.LongTensor(metadata.band_int.values).unsqueeze(1)
         I_auto = torch.Tensor(metadata.I_auto.values).unsqueeze(1)
         
      
@@ -163,8 +163,8 @@ class Lumos_net:
         stamps = self.create_cutouts(img, coords_pix)
         profiles = self.create_modelled_profiles(metadata)
         interv = metadata.interv.values[0]
-        metadata['band'] = self._internal_naming(metadata.band.values[0], interv) #*np.ones(shape = len(metadata))
-                             
+        metadata['band_int'] = self._internal_naming(metadata.band.values[0], interv) #*np.ones(shape = len(metadata))
+                                     
         pred = self._photometry_cutouts(stamps,profiles, metadata)
 
         return pred
