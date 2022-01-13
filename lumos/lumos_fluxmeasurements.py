@@ -24,15 +24,17 @@ from .lumos import Lumos_net
 
 
 def clear_catalogue(cat, alpha_keys, flux_keys, sigma_keys):
-    cat.a1.where(cat.sigma_keys[0] < errlim, 0, inplace=True)
-    cat.a2.where(cat.sigma_keys[1] < errlim, 0, inplace=True)
-    cat.a3.where(cat.sigma_keys[2] < errlim, 0, inplace=True)
-    cat.a4.where(cat.sigma_keys[3] < errlim, 0, inplace=True)
-    cat.a5.where(cat.sigma_keys[4] < errlim, 0, inplace=True)
+    errlim = 403
+
+    cat.a1.where(cat.e1 < errlim, 0, inplace=True)
+    cat.a2.where(cat.e2 < errlim, 0, inplace=True)
+    cat.a3.where(cat.e3 < errlim, 0, inplace=True)
+    cat.a4.where(cat.e4 < errlim, 0, inplace=True)
+    cat.a5.where(cat.e5 < errlim, 0, inplace=True)
     cat = cat[cat[alpha_keys].sum(1) != 0]
     cat[alpha_keys] = cat[alpha_keys] / cat[alpha_keys].values.sum(1)[:,None]
 
-    alphas, fluxes, sigmas = cat[alpha_keys], cat[flux_keys], cat[sigma_keys]
+    alphas, fluxes, sigmas = cat[alpha_keys].values, cat[flux_keys].values, cat[sigma_keys].values
      
     return cat, alphas, fluxes, sigmas
 
@@ -45,8 +47,8 @@ def single_exposures_flux(alphas, fluxes, sigmas):
     return flux, sig
 
 
-def coadds_flux_measurements(catcalib):
-    refids = catcalib.red_id.unique().values
+def coadds_flux_measurements(catcalib, alpha_keys, flux_keys, sigma_keys):
+    refids = catcalib.ref_id.unique()
 
     grid0 = np.arange(-10,-2,0.1)
     grid1 = np.arange(-2,10,0.01)
@@ -71,7 +73,7 @@ def coadds_flux_measurements(catcalib):
 
 
         pdfs_norm = pd.DataFrame(pdfs_norm)
-        pdfs_norm['band'] = s.band.values
+        pdfs_norm['band'] = catsub.band.values
 
         gr = pdfs_norm.groupby(['band'])
         pdf_coadd = gr.prod()
